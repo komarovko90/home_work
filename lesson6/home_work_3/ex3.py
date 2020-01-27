@@ -1,15 +1,9 @@
 class Worker:
-    name = ''
-    surname = ''
-    position = ''
-    _income = {}
-
     def __init__(self, name, surname, pos, wage, bonus):
         self.name = name
         self.surname = surname
         self.position = pos
-        self._income['wage'] = wage
-        self._income['bonus'] = bonus
+        self._income = {'wage': wage, 'bonus': bonus}
 
 
 class Position(Worker):

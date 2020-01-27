@@ -1,6 +1,4 @@
 class Stationery:
-    title = ''
-
     def draw(self):
         print(self.title)
         print('Запуск отрисовки')

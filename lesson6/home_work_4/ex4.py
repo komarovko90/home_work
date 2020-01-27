@@ -1,8 +1,9 @@
 class Car:
-    speed = 0
-    color = ''
-    name = ''
-    is_police = False
+    def __init__(self, speed, col, name):
+        self.speed = speed
+        self.color = col
+        self.name = name
+        self.is_police = False
 
     def go(self, speed):
         print(f'Car rides, {speed} km/h')
@@ -13,7 +14,7 @@ class Car:
         self.speed = 0
 
     def turn(self, direction):
-        print(f'The car turned {direction}')
+        print(f'{self.name} turned {direction}')
 
     def show_speed(self):
         print (f'Your speed: {self.speed}')
@@ -23,9 +24,7 @@ class Car:
 
 class TownCar(Car):
     def __init__(self, speed, col, name):
-        self.speed = speed
-        self.color = col
-        self.name = name
+        super().__init__(speed, col, name)
 
     def show_speed(self):
         if self.speed > 60:
@@ -38,9 +37,7 @@ class TownCar(Car):
 
 class WorkCar(Car):
     def __init__(self, speed, col, name):
-        self.speed = speed
-        self.color = col
-        self.name = name
+        super().__init__(speed, col, name)
 
     def show_speed(self):
         if self.speed > 40:
@@ -53,16 +50,12 @@ class WorkCar(Car):
 
 class SportCar(Car):
     def __init__(self, speed, col, name):
-        self.speed = speed
-        self.color = col
-        self.name = name
+        super().__init__(speed, col, name)
 
 
 class PoliceCar(Car):
     def __init__(self, speed, col, name):
-        self.speed = speed
-        self.color = col
-        self.name = name
+        super().__init__(speed, col, name)
 
 
 vesta = TownCar(35, 'red', 'Vesta')
