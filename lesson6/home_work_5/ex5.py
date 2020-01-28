@@ -1,10 +1,10 @@
 class Stationery:
+    def __init__(self, name):
+        self.title = name
+
     def draw(self):
         print(self.title)
         print('Запуск отрисовки')
-
-    def __init__(self, name):
-        self.title = name
 
 
 class Pen(Stationery):

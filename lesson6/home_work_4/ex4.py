@@ -1,9 +1,9 @@
 class Car:
-    def __init__(self, speed, col, name):
+    def __init__(self, speed, col, name, is_police=False):
         self.speed = speed
         self.color = col
         self.name = name
-        self.is_police = False
+        self.is_police = is_police
 
     def go(self, speed):
         print(f'Car rides, {speed} km/h')
