@@ -1,0 +1,7 @@
+cd //mnt/d/Komarov/Python_project/hello/home_work
+
+git checkout --track -b lesson6 origin/lesson6 	- создание ветки lesson6 в локальном хранилище из ветки origin/lesson6 удаленного хранилища
+git push origin master HEAD:lesson6 		- загрузка ветки mster локального хранилища в ветку lesson6 удаленного хранилища
+git fetch --prune origin 			- проверка были ли удалены ветки на сервере
+
+export PS1="\[\033]0;$MSYSTEM:\w\007\033[32m\]\u@\h:\[\033[33m\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\033[0m\]\$ "
